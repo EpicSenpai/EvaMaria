@@ -1,6 +1,6 @@
-FROM python:3.10-slim-buster
+FROM python:3.10-slim-bookworm
 
-RUN apt update && apt upgrade -y
+RUN apt-get update && apt-get upgrade -y --fix-missing
 RUN apt install git -y
 COPY requirements.txt /requirements.txt
 
